@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import TabButton from './TabButton.jsx';
 import { EXAMPLES } from '../data.js';
+import Section from './Section.jsx';
 
 const Examples = () => {
 
@@ -30,8 +31,8 @@ const Examples = () => {
 
 
 return(
-<section id="examples">
-          <h2>Examples</h2>
+<Section title="Examples" id="examples">
+          {/* <h2>Examples</h2> */}
           <menu>
             <TabButton
               isSelected={selectedTopic === 'components'}
@@ -59,7 +60,7 @@ return(
             </TabButton>
           </menu>
           {tabContent}
-        </section>
+        </Section>
 )}
 
 export default Examples;
